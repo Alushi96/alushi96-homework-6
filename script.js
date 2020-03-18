@@ -203,3 +203,41 @@ function ajx () {
 
       
 };
+
+var pastArea = document.querySelector("#pastArea");
+var areas = [];
+
+
+
+function renderAreas() {
+    pastArea.innerHTML = "";
+
+    for (var i = 0; i<areas.length; i++) {
+        var pAreas = areas[i];
+
+        var button = document.createElement("button");
+        button.textContent = pAreas;
+        
+
+        var div = document.createElement("div");
+        div.textContent = "";
+        div.setAttribute("data-index", i);
+        div.appendChild(button);
+
+        pastArea.appendChild(div);
+    }
+}
+
+function init() {
+    var storedArea = JSON.parse(localStorage.getItem("area"));
+
+    if (storedArea !==null) {
+        areas = storedArea;
+    }
+
+    renderAreas();
+}
+
+function storeArea () {
+    localStorage.setItem("area", JSON.stringify(areas));
+}
