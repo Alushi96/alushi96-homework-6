@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <header>
+        <h1 class="display-5" id="title">Weather Dashboard</h1>
+    </header>  
+
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-sm-12" id="search">
+                        <h3>Search for a City:</h3>
+                        <input type="text" id="local"><button id="submit">Search</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" id="search">
+                     <ul id="pastArea"></ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" id="search">
+                        <button id="clearbtn">Clear History</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-12" id="current">
+                        <div><h1 id="area"></h1><img id="icon" src="#" alt=""></div>
+                        <p id="temp">Temperature: </p>
+                        <p id="humid">Humidity: </p>
+                        <p id="wind">Wind Speed: </p>
+                        <span id="uvi">UV Index: </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>5-Day Forecast:</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p id="Tdate"></p>
+                        <img id="Ticon" src="#" alt="">
+                        <p id="Ttemp">Temp: </p>
+                        <p id="Thumid">Humidty: </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="Mdate"></p>
+                        <img id="Micon" src="#" alt="">
+                        <p id="Mtemp">Temp: </p>
+                        <p id="Mhumid">Humidty: </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="Fdate"></p>
+                        <img id="Ficon" src="#" alt="">
+                        <p id="Ftemp">Temp: </p>
+                        <p id="Fhumid">Humidty: </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="Vdate"></p>
+                        <img id="Vicon" src="#" alt="">
+                        <p id="Vtemp">Temp: </p>
+                        <p id="Vhumid">Humidty: </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="Gdate"></p>
+                        <img id="Gicon" src="#" alt="">
+                        <p id="Gtemp">Temp: </p>
+                        <p id="Ghumid">Humidty: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
