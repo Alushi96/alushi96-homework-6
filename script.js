@@ -241,3 +241,22 @@ function init() {
 function storeArea () {
     localStorage.setItem("area", JSON.stringify(areas));
 }
+
+pastArea.addEventListener("click", function(event) {
+    var element = event.target;
+  
+    // If that element is a button...
+    if (element.matches("button") === true) {
+      // Get its data-index value and remove the todo element from the list
+      var index = element.parentElement.getAttribute("data-index");
+      //areas.splice(index,1);
+      locate = areas[index];
+      console.log(index);
+      console.log(locate);
+      
+    }
+    storeArea();
+    renderAreas();
+    ajx();
+});
+init();
