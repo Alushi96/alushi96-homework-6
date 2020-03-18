@@ -43,6 +43,7 @@ var Ghumid = document.querySelector("#Ghumid");
 var locate = "";
 console.log(locate);
 
+
 $(submit).on("click", function(event) {
     locate = local.value + ",US";
     console.log(locate);
@@ -50,9 +51,9 @@ $(submit).on("click", function(event) {
 })
 
 function ajx () {
-    event.preventDefault();
+    //event.preventDefault();
    
-
+    //var locate = "alexandria";
 
     var APIKey = "c1c87793aba6a378ee77da807ea2f5c4";
 
@@ -234,22 +235,20 @@ function init() {
     if (storedArea !==null) {
         areas = storedArea;
     }
-
+    locate = areas[areas.length - 1];
+    console.log(locate);
     renderAreas();
 }
-
+init();
+ajx();
 function storeArea () {
     localStorage.setItem("area", JSON.stringify(areas));
 }
 
 pastArea.addEventListener("click", function(event) {
     var element = event.target;
-  
-    // If that element is a button...
     if (element.matches("button") === true) {
-      // Get its data-index value and remove the todo element from the list
       var index = element.parentElement.getAttribute("data-index");
-      //areas.splice(index,1);
       locate = areas[index];
       console.log(index);
       console.log(locate);
@@ -259,7 +258,7 @@ pastArea.addEventListener("click", function(event) {
     renderAreas();
     ajx();
 });
-init();
+
 
 var clearbtn = document.querySelector("#clearbtn");
 
