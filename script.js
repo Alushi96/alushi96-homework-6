@@ -260,3 +260,13 @@ pastArea.addEventListener("click", function(event) {
     ajx();
 });
 init();
+
+var clearbtn = document.querySelector("#clearbtn");
+
+clearbtn.addEventListener("click", function() {
+    var element = event.target;
+
+    areas.splice(areas);
+    storeArea();
+    renderAreas();
+})
