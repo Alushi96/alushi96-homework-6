@@ -42,3 +42,9 @@ var Ghumid = document.querySelector("#Ghumid");
 
 var locate = "";
 console.log(locate);
+
+$(submit).on("click", function(event) {
+    locate = local.value + ",US";
+    console.log(locate);
+    ajx();
+})
