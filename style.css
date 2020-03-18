@@ -1,0 +1,39 @@
+#title {
+    background-color: rgb(85, 84, 84);
+    color: white;
+    text-align: center;
+}
+
+.container-lg {
+    height: 100%;
+    width: 100%;
+}
+
+.good {
+    background-color: green;
+    color: white;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.bad {
+    background-color: red;
+    color: white;
+}
+
+#search {
+    background-color: rgb(173, 166, 166);
+}
+
+#current {
+    border-top: solid;
+    border-left: solid;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+#clearbtn {
+    float: right;
+}
