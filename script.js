@@ -51,9 +51,6 @@ $(submit).on("click", function(event) {
 })
 
 function ajx () {
-    //event.preventDefault();
-   
-    //var locate = "alexandria";
 
     var APIKey = "c1c87793aba6a378ee77da807ea2f5c4";
 
@@ -200,9 +197,7 @@ function ajx () {
                 areas.push(response.city.name);
                 storeArea();
                 renderAreas();
-        })
-
-      
+            })    
 };
 
 var pastArea = document.querySelector("#pastArea");
@@ -239,8 +234,10 @@ function init() {
     console.log(locate);
     renderAreas();
 }
+
 init();
 ajx();
+
 function storeArea () {
     localStorage.setItem("area", JSON.stringify(areas));
 }
